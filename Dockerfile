@@ -11,7 +11,8 @@ RUN apk add --no-cache git && \
 RUN git init && \
     git remote add origin https://github.com/jerrykpg/mundose-node-mongo.git && \
     git fetch && \
-    git checkout ${GIT_BRANCH}
+    git checkout ${GIT_BRANCH} && \
+    git pull
 
 RUN npm install
 
