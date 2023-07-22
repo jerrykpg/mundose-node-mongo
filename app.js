@@ -5,9 +5,8 @@ require('dotenv').config()
 const app = express();
 
 
-
 //mongodb
-mongoose.connect('mongodb://mongo:27017/todo_express',
+mongoose.connect('mongodb://'+process.env.MONGO_HOST+':27017/todo_express',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

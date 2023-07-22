@@ -1,18 +1,31 @@
 version: '3'
 services:
-  app:
-    container_name: node-mongo-app
+  mse-app:
+    container_name: mse-app-node
     volumes:
       - .:/app
     restart: always
-    build: .
+    build:
+      context: .
+      tags:
+        - "mse-nodeapp:1.1"
     ports:
-      - '3000:3000'
+      - '8480:3000'
     links:
-      - mongo
-  mongo:
-    container_name: mongo
-    image: mongo
-    restart: always 
-    ports:
-      - '27017:27017'
+      - mse-db
+    networks:
+      - mse-network
+    environment:
+      - MONGO_HOST=mse-db
+  mse-db:
+    container_name: mse-db-mongodb
+    image: mongo:4.2.23
+    restart: always
+    volumes:
+      - mse-db-data:/data/db
+    networks:
+      - mse-network
+volumes:
+  mse-db-data:
+networks:
+  mse-network:
