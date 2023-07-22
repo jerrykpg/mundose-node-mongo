@@ -1,6 +1,6 @@
 {
   "name": "node-mongo",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davila7/node-mongo.git"
+    "url": "git+https://github.com/jerrykpg/mundose-node-mongo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/davila7/node-mongo/issues"
+    "url": "https://github.com/jerrykpg/mundose-node-mongo/issues"
   },
-  "homepage": "https://github.com/davila7/node-mongo#readme",
+  "homepage": "https://github.com/jerrykpg/mundose-node-mongo#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
