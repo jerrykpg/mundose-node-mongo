@@ -8,7 +8,7 @@ services:
     build:
       context: .
       tags:
-        - "mse-nodeapp:1.1"
+        - "mse-nodeapp:1.2"
     ports:
       - '8480:3000'
     links:
